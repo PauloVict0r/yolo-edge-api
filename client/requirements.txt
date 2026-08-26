@@ -1,0 +1,12 @@
+httpx==0.27.0
+Pillow==10.3.0
+# 1. Garanta as pastas criadas
+mkdir -p ~/yolo-api/models ~/yolo-api/images ~/yolo-api/output
+
+
+# 2. Baixe os pesos oficiais do YOLOv8n direto para a pasta models
+wget -P ~/yolo-api/models/ https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt
+
+
+# 3. Baixe uma imagem de teste para a pasta images
+wget -O ~/yolo-api/images/test.jpg https://ultralytics.com/images/zidane.jpg
