@@ -2,3 +2,4 @@
     remote = local_remote
 ['remote "local_remote"']
     url = ssh://@100.108.245.10/home/pv/dvc-storage
+    user = pv
