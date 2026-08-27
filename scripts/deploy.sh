@@ -19,7 +19,7 @@ echo " Deploy — $(date '+%Y-%m-%d %H:%M:%S')"
 echo "========================================"
 
 
-cd "$DEPLOY_PATH"
+cd /home/pv/yolo-edge-api
 
 
 # ── Salva a imagem atual para possível rollback ──────────────
