@@ -3,6 +3,8 @@ services:
 
   yolo-api:
     build:
+      image:
+        ghcr.io/paulovict0r/yolo-edge-api/yolo-api:latest
       context: .
       dockerfile: Dockerfile.api
     container_name: yolo-api
