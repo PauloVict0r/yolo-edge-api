@@ -21,3 +21,7 @@ images/
 # Variáveis de ambiente locais
 .env
 /models
+preprocessing/outputs/
+__pycache__/
+runs/
+
