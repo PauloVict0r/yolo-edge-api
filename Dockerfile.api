@@ -2,6 +2,12 @@ FROM python:3.11-slim-bookworm
 
 
 # Instala dependencias do sistema + curl para o healthcheck
+RUN apt-get update && apt-get install -y wget gpg \
+    && wget -qO - https://archive.raspberrypi.com/debian/raspberrypi.gpg.key | gpg --dearmor -o /usr/share/keyrings/raspberrypi-archive-keyring.gpg \
+    && echo "deb [signed-by=/usr/share/keyrings/raspberrypi-archive-keyring.gpg] http://archive.raspberrypi.com/debian/ bookworm main" > /etc/apt/sources.list.d/raspi.list \
+    && apt-get update \
+    && apt-get install -y libcamera-apps
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libgl1 libglib2.0-0 libgomp1 curl && \
     rm -rf /var/lib/apt/lists/*
